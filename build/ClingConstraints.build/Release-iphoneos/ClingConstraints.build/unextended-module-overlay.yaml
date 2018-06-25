@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/luis/Desktop/ClingConstraints/build/Release-iphoneos/ClingConstraints.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/luis/Desktop/ClingConstraints/build/ClingConstraints.build/Release-iphoneos/ClingConstraints.build/unextended-module.modulemap',
+    }]
+  }]
+}
