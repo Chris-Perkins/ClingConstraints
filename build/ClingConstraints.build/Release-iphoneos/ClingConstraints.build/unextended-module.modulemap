@@ -1,0 +1,10 @@
+framework module ClingConstraints {
+  umbrella header "ClingConstraints.h"
+
+  export *
+  module * { export * }
+}
+
+module ClingConstraints.__Swift {
+    exclude header "ClingConstraints-Swift.h"
+}

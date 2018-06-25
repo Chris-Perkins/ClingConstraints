@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "29725f6661c7e21bc20ce3ea861e0f38"
+build_time: [1529885131, 638019000]
+inputs:
+  "/Users/luis/Desktop/ClingConstraints/ClingConstraints/UIViewExtension.swift": [9223372036, 854775807]
+  "/Users/luis/Desktop/ClingConstraints/ClingConstraints/NSLayoutConstraintExtension.swift": [9223372036, 854775807]
+  "/Users/luis/Desktop/ClingConstraints/ClingConstraints/NSLayoutConstraintCollectionExtension.swift": [9223372036, 854775807]

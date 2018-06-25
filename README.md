@@ -9,33 +9,33 @@ This was mainly created for my own use; feel free to use it how you want if you 
 ##### Copy another View's Attribute
 ```Swift
 // This creates and activates a constraint that makes thisView's height equal to that view
-thisView.copy(.height, of: thatView) 
+thisView.copy(.height, of: thatView)
 ```
 
 ##### Copying Constraints with Personal Space
 ```Swift
 // thisView copies thatView's height * 0.5 - 30.
-thisView.copy(.height, of: thatView).withOffset(-30).withMultiplier(0.5) 
+thisView.copy(.height, of: thatView).withOffset(-30).withMultiplier(0.5)
 ```
 
 ##### Copying Multiple Constraints In-Line
 ```Swift
 // thisView copies the right, top, and left anchor constraints of that view-- in one line.
-thisView.copy(.right, .top, .left of: thatView) 
+thisView.copy(.right, .top, .left of: thatView)
 ```
 
 ##### Clinging Constraints Together
 ```Swift
 // thisView positions itself to the right of thatView with a spacing of 5
-thisView.cling(.left to: thatView, .right).withOffset(5) 
+thisView.cling(.left to: thatView, .right).withOffset(5)
 ```
 
-#### What's in the box?  
+#### What's in the box?
 
-##### Constraint Creation:  
-On any UIView, you can call the following functions. 
+##### Constraint Creation:
+On any UIView, you can call the following functions.
 
-Note that these all return the created constraint. If multiple constraints are created, a list of constraints are returned.  
+Note that these all return the created constraint. If multiple constraints are created, a list of constraints are returned.
 ```Swift
 // This view copies the other view's attributes (returns list of created constraints)
 copy(_ attributes: NSLayoutAttribute..., of: UIView)
@@ -62,21 +62,25 @@ setWidth(_: CGFloat)
 ```
 
 
-##### Constraint Property Chaining:  
-On any NSLayoutConstraint:  
+##### Constraint Property Chaining:
+On any NSLayoutConstraint:
 ```Swift
-withMultiplier(_: CGFloat)  
-withOffset(_: CGFloat)   
-withPriority(_: UILayoutPriority)  
-withRelation(_: NSLayoutRelation)  
+withMultiplier(_: CGFloat)
+withOffset(_: CGFloat)
+withPriority(_: UILayoutPriority)
+withRelation(_: NSLayoutRelation)
 ```
 
-#### For constraint activation and deactivation:  
-In any collection of constraints:  
+#### For constraint activation and deactivation:
+In any collection of constraints:
 ```Swift
 activateAllConstraints()
 deactivateAllConstraints()
 ```
+
+## Documentation
+
+Read the [docs](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Chris-Perkins/ClingConstraints/master/docs/index.html)
 
 ## Author
 

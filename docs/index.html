@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ClingConstraints  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="ClingConstraints  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">ClingConstraints Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/Chris-Perkins/ClingConstraints"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">ClingConstraints Reference</a>
+        <img id="carat" src="img/carat.png" />
+        ClingConstraints  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='clingconstraints' class='heading'>ClingConstraints</h1>
+
+<p>Yet another programmatic constraints library for iOS. The focus of ClingConstraints is to have clean, readable, and powerful constraint creation.</p>
+
+<p>This was mainly created for my own use; feel free to use it how you want if you somehow stumbled here.</p>
+<h2 id='example-code' class='heading'>Example Code</h2>
+<h5 id='copy-another-view-39-s-attribute' class='heading'>Copy another View&rsquo;s Attribute</h5>
+<pre class="highlight plaintext"><code>// This creates and activates a constraint that makes thisView's height equal to that view
+thisView.copy(.height, of: thatView) 
+</code></pre>
+<h5 id='copying-constraints-with-personal-space' class='heading'>Copying Constraints with Personal Space</h5>
+<pre class="highlight plaintext"><code>// thisView copies thatView's height * 0.5 - 30.
+thisView.copy(.height, of: thatView).withOffset(-30).withMultiplier(0.5) 
+</code></pre>
+<h5 id='copying-multiple-constraints-in-line' class='heading'>Copying Multiple Constraints In-Line</h5>
+<pre class="highlight plaintext"><code>// thisView copies the right, top, and left anchor constraints of that view-- in one line.
+thisView.copy(.right, .top, .left of: thatView) 
+</code></pre>
+<h5 id='clinging-constraints-together' class='heading'>Clinging Constraints Together</h5>
+<pre class="highlight plaintext"><code>// thisView positions itself to the right of thatView with a spacing of 5
+thisView.cling(.left to: thatView, .right).withOffset(5) 
+</code></pre>
+<h4 id='what-39-s-in-the-box' class='heading'>What&rsquo;s in the box?</h4>
+<h5 id='constraint-creation' class='heading'>Constraint Creation:</h5>
+
+<p>On any UIView, you can call the following functions. </p>
+
+<p>Note that these all return the created constraint. If multiple constraints are created, a list of constraints are returned.  </p>
+<pre class="highlight plaintext"><code>// This view copies the other view's attributes (returns list of created constraints)
+copy(_ attributes: NSLayoutAttribute..., of: UIView)
+
+// This view copies the other view's attribute
+copy(_: NSLayoutAttribute, of: UIView)
+
+// Clings the calling view's attribute to the other view's attribute.
+cling(_: NSLayoutAttribute, to: UIView, _: NSLayoutAttribute)
+
+// Fills the calling view left-right with the given views with the provided spacing.
+// Provides inset setting if spacesInternally is enabled.
+fillHorizontally(withViews: [UIView], withSpacing: CGFloat, spacesInternally: Bool = true)
+
+// Fills the calling view top-down with the given views with the provided spacing.
+// Provides inset setting if spacesInternally is enabled.
+fillVertically(withViews: [UIView], withSpacing spacing: CGFloat, spacesInternally: Bool = true)
+
+// Sets the height for this view
+setHeight(_: CGFloat)
+
+// Sets the width for this view
+setWidth(_: CGFloat)
+</code></pre>
+<h5 id='constraint-property-chaining' class='heading'>Constraint Property Chaining:</h5>
+
+<p>On any NSLayoutConstraint:  </p>
+<pre class="highlight plaintext"><code>withMultiplier(_: CGFloat)  
+withOffset(_: CGFloat)   
+withPriority(_: UILayoutPriority)  
+withRelation(_: NSLayoutRelation)  
+</code></pre>
+<h4 id='for-constraint-activation-and-deactivation' class='heading'>For constraint activation and deactivation:</h4>
+
+<p>In any collection of constraints:  </p>
+<pre class="highlight plaintext"><code>activateAllConstraints()
+deactivateAllConstraints()
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p><a href="mailto:chris@chrisperkins.me">chris@chrisperkins.me</a></p>
+
+<p>No license; do whatever</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Chris</a>. All rights reserved. (Last updated: 2018-06-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
