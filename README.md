@@ -57,13 +57,13 @@ thisView.copy(.height, of: thatView).withOffset(-30).withMultiplier(0.5)
 ##### Copying Multiple Constraints In-Line
 ```Swift
 // thisView copies the right, top, and left anchor constraints of that view-- in one line.
-thisView.copy(.right, .top, .left of: thatView)
+thisView.copy(.right, .top, .left, of: thatView)
 ```
 
 ##### Clinging Constraints Together
 ```Swift
 // thisView positions itself to the right of thatView with a spacing of 5
-thisView.cling(.left to: thatView, .right).withOffset(5)
+thisView.cling(.left, to: thatView, .right).withOffset(5)
 ```
 
 #### What's in the box?
