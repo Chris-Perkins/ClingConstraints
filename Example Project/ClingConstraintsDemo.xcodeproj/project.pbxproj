@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		227AFC8920DFACB700DF21AD /* NSLayoutConstraintCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AFC8820DFACB700DF21AD /* NSLayoutConstraintCollectionExtension.swift */; };
+		22C05E4A20E9423A00AF0D04 /* FillMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C05E4920E9423A00AF0D04 /* FillMethod.swift */; };
 		22E28D0E20DF83D600F90F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E28D0D20DF83D600F90F0F /* AppDelegate.swift */; };
 		22E28D1020DF83D600F90F0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E28D0F20DF83D600F90F0F /* ViewController.swift */; };
 		22E28D1320DF83D600F90F0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E28D1120DF83D600F90F0F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		227AFC8820DFACB700DF21AD /* NSLayoutConstraintCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintCollectionExtension.swift; sourceTree = "<group>"; };
+		22C05E4920E9423A00AF0D04 /* FillMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillMethod.swift; sourceTree = "<group>"; };
 		22E28D0A20DF83D600F90F0F /* ClingConstraintsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClingConstraintsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E28D0D20DF83D600F90F0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22E28D0F20DF83D600F90F0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +95,10 @@
 		22E28D2D20DF83E000F90F0F /* ClingConstraints */ = {
 			isa = PBXGroup;
 			children = (
-				22E28D2E20DF83F600F90F0F /* UIViewExtension.swift */,
+				22C05E4920E9423A00AF0D04 /* FillMethod.swift */,
 				22E28D3020DF841000F90F0F /* NSLayoutConstraintExtension.swift */,
 				227AFC8820DFACB700DF21AD /* NSLayoutConstraintCollectionExtension.swift */,
+				22E28D2E20DF83F600F90F0F /* UIViewExtension.swift */,
 			);
 			path = ClingConstraints;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				22E28D1020DF83D600F90F0F /* ViewController.swift in Sources */,
 				22E28D2F20DF83F600F90F0F /* UIViewExtension.swift in Sources */,
 				22E28D0E20DF83D600F90F0F /* AppDelegate.swift in Sources */,
+				22C05E4A20E9423A00AF0D04 /* FillMethod.swift in Sources */,
 				227AFC8920DFACB700DF21AD /* NSLayoutConstraintCollectionExtension.swift in Sources */,
 				22E28D3120DF841000F90F0F /* NSLayoutConstraintExtension.swift in Sources */,
 			);

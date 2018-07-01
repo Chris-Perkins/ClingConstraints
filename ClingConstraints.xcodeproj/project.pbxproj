@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C05E4820E93E4F00AF0D04 /* FillMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C05E4720E93E4F00AF0D04 /* FillMethod.swift */; };
 		A02C90C420E0683D00A9258E /* ClingConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02C90BA20E0683D00A9258E /* ClingConstraints.framework */; };
 		A02C90C920E0683D00A9258E /* ClingConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02C90C820E0683D00A9258E /* ClingConstraintsTests.swift */; };
 		A02C90CB20E0683D00A9258E /* ClingConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = A02C90BD20E0683D00A9258E /* ClingConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22C05E4720E93E4F00AF0D04 /* FillMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillMethod.swift; sourceTree = "<group>"; };
 		A02C90BA20E0683D00A9258E /* ClingConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClingConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02C90BD20E0683D00A9258E /* ClingConstraints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClingConstraints.h; sourceTree = "<group>"; };
 		A02C90BE20E0683D00A9258E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		A02C90BC20E0683D00A9258E /* ClingConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				22C05E4720E93E4F00AF0D04 /* FillMethod.swift */,
 				A02C90D520E0687B00A9258E /* NSLayoutConstraintCollectionExtension.swift */,
 				A02C90D620E0687B00A9258E /* NSLayoutConstraintExtension.swift */,
 				A02C90D420E0687B00A9258E /* UIViewExtension.swift */,
@@ -210,6 +213,7 @@
 				A02C90D720E0687B00A9258E /* UIViewExtension.swift in Sources */,
 				A02C90DB20E0687B00A9258E /* NSLayoutConstraintExtension.swift in Sources */,
 				A02C90D920E0687B00A9258E /* NSLayoutConstraintCollectionExtension.swift in Sources */,
+				22C05E4820E93E4F00AF0D04 /* FillMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

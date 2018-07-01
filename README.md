@@ -66,6 +66,12 @@ thisView.copy(.right, .top, .left, of: thatView)
 thisView.cling(.left, to: thatView, .right).withOffset(5)
 ```
 
+##### Filling a View
+```Swift
+// Fills a view from the top to the bottom with the given views
+thisView.fill(.topToBottom, withViews: [thatView1, thatView2], spacing: 0)
+```
+
 #### What's in the box?
 
 ##### Constraint Creation:
@@ -82,13 +88,9 @@ copy(_: NSLayoutAttribute, of: UIView)
 // Clings the calling view's attribute to the other view's attribute.
 cling(_: NSLayoutAttribute, to: UIView, _: NSLayoutAttribute)
 
-// Fills the calling view left-right with the given views with the provided spacing.
-// Provides inset setting if spacesInternally is enabled.
-fillHorizontally(withViews: [UIView], withSpacing: CGFloat, spacesInternally: Bool = true)
-
-// Fills the calling view top-down with the given views with the provided spacing.
-// Provides inset setting if spacesInternally is enabled.
-fillVertically(withViews: [UIView], withSpacing: CGFloat, spacesInternally: Bool = true)
+// Fills the calling view with the given FillMethod from left to right.
+// FillMethods: .leftToRight, .rightToLeft, .topToBottom, .bottomToTop
+fill(_: FillMethod, withViews: [UIView], withSpacing: CGFloat, spacesInternally: Bool = true)
 
 // Sets the height for this view
 setHeight(_: CGFloat)

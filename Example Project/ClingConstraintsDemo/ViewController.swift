@@ -80,24 +80,24 @@ class ViewController: UIViewController {
         /* Fill in the centerView vertically with the different containerViews; do this with and
             without spacing. */
         spacedConstraints.append(contentsOf: centerView
-            .fillVertically(withViews: containerViews,withSpacing: ViewController.bigSpacingAmount))
+            .fill(.topToBottom, withViews: containerViews,withSpacing: ViewController.bigSpacingAmount))
         // De-activate to prevent breaking when creating unspaced constraints
         spacedConstraints.deactivateAllConstraints()
         unspacedConstraints.append(contentsOf: centerView
-            .fillVertically(withViews: containerViews,
-                            withSpacing: ViewController.smallSpacingAmount))
+            .fill(.topToBottom, withViews: containerViews,
+                  withSpacing: ViewController.smallSpacingAmount))
         
         for (index, viewsList) in containedViews.enumerated() {
             /* Because of the order we appended in, we know the containerView at the specified index
                 contains the views in the viewsList at the same index. */
             spacedConstraints.append(contentsOf: containerViews[index]
-                .fillHorizontally(withViews: viewsList,
-                                  withSpacing: ViewController.bigSpacingAmount))
+                .fill(.leftToRight, withViews: viewsList,
+                      withSpacing: ViewController.bigSpacingAmount))
             // De-activate to prevent breaking when creating unspaced constraints
             spacedConstraints.deactivateAllConstraints()
             unspacedConstraints.append(contentsOf: containerViews[index]
-                .fillHorizontally(withViews: viewsList,
-                                  withSpacing: ViewController.smallSpacingAmount))
+                .fill(.leftToRight, withViews: viewsList,
+                      withSpacing: ViewController.smallSpacingAmount))
         }
         
         pulseBetween(initialPulseConstraints: spacedConstraints,
