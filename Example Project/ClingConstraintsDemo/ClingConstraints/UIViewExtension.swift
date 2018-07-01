@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     /**
      Creates, activates, and returns a list of NSLayoutConstraint that copies the specified
      viewToCopy's attributes.
@@ -19,11 +19,7 @@ extension UIView {
      */
     @discardableResult public func copy(_ attributes: NSLayoutAttribute...,
         of viewToCopy: UIView) -> [NSLayoutConstraint] {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        return attributes.map {
-            self.copy($0, of: viewToCopy)
-        }
+        return attributes.map { self.copy($0, of: viewToCopy) }
     }
     
     /**
@@ -47,7 +43,7 @@ extension UIView {
     }
     
     /**
-     Creates, activates, and returns a constraint that clings this view's specified attribute to the
+     Creates, activats, and returns a constraint that clings this view's specified attribute to the
      specified view's clingedAttribute.
      
      Example: ```cling(attribute: .left, toView: button, .right)``` would cling this view's
@@ -58,7 +54,7 @@ extension UIView {
      - Parameter clingedAttribute: The attribute from the clingedView that this constraint should
      cling to
      - Returns: The constraint that was clinged to
-    */
+     */
     @discardableResult public func cling(_ clingerAttribute: NSLayoutAttribute,
                                          to clingedView: UIView,
                                          _ clingedAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
@@ -74,15 +70,21 @@ extension UIView {
     }
     
     /**
-     Creates, activates, and returns the constraints that are created to fill this view horizontally
-     with the provided views with the given spacing.
+     Creates, activates, and returns the constraints that are created to fill this view
+     with the provided views with the given spacing for the provided fill method.
+     
      
      If internal spacing is toggled on, there will be additional spacing before the first view's left
      and the last view's right margins with respect to this view.
      
-     If internal spacing is toggled on, there will not be additional spacing before the first view's
+     If internal spacing is toggled off, there will not be additional spacing before the first view's
      left and the last view's right margins with respect to this view.
      
+     - Note: No constraints beyond those needed to fill the view are created. For instance, if a
+     view should be filled with other views .topToBottom, no width or centering horizontally
+     constraints will be created.
+     
+     - Parameter fillMethod: The method that should be used to fill this view
      - Parameter views: The views that should fill this view horizontally
      - Parameter spacing: The amount of spacing between views
      - Parameter spacesInternally: Determines if additional spacing is provided for the first view
@@ -90,9 +92,50 @@ extension UIView {
      - Returns: The constraints created to fill this view horizontally. These will be alternating
      sequences of `.left` and `.width` constraints for each view in the input variable `views`.
      */
-    @discardableResult public func fillHorizontally(withViews views: [UIView],
-                                                    withSpacing spacing: CGFloat,
-                                                    spacesInternally: Bool = true)
+    @discardableResult public func fill(_ fillMethod: FillMethod,
+                                        withViews views: [UIView],
+                                        withSpacing spacing: CGFloat,
+                                        spacesInternally: Bool = true) -> [NSLayoutConstraint] {
+        switch (fillMethod) {
+        case .bottomToTop:
+            return fillVertically(fillMethod, withViews: views,
+                                  withSpacing: spacing, spacesInternally: spacesInternally)
+        case .topToBottom:
+            return fillVertically(fillMethod, withViews: views,
+                                  withSpacing: spacing, spacesInternally: spacesInternally)
+        case .leftToRight:
+            return fillHorizontally(fillMethod, withViews: views,
+                                    withSpacing: spacing, spacesInternally: spacesInternally)
+        case .rightToLeft:
+            return fillHorizontally(fillMethod, withViews: views,
+                                    withSpacing: spacing, spacesInternally: spacesInternally)
+        }
+    }
+    
+    
+    /**
+     Creates, activates, and returns the constraints that are created to fill this view horizontally
+     with the provided views with the given spacing.
+     
+     If internal spacing is toggled on, there will be additional spacing before the first view's left
+     and the last view's right margins with respect to this view.
+     
+     If internal spacing is toggled off, there will not be additional spacing before the first
+     view's left and the last view's right margins with respect to this view.
+     
+     - Parameter fillMethod: The method of filling horizontally; must only be .LeftToRight or
+     .RightToLeft
+     - Parameter views: The views that should fill this view horizontally
+     - Parameter spacing: The amount of spacing between views
+     - Parameter spacesInternally: Determines if additional spacing is provided for the first view
+     and last view with respect to this view.
+     - Returns: The constraints created to fill this view horizontally. These will be alternating
+     sequences of `.left` and `.width` constraints for each view in the input variable `views`.
+     */
+    @discardableResult private func fillHorizontally(_ fillMethod: FillMethod,
+                                                     withViews views: [UIView],
+                                                     withSpacing spacing: CGFloat,
+                                                     spacesInternally: Bool = true)
         -> [NSLayoutConstraint] {
             var constraints = [NSLayoutConstraint]()
             /* If spacesInternally == true, add 1 since we account for spacing before the first view
@@ -101,8 +144,10 @@ extension UIView {
             var lastView = self
             
             for view in views {
-                constraints.append(view.cling(.left, to: lastView,
-                                              lastView == self ? .left : .right)
+                constraints.append(view.cling(fillMethod == .leftToRight ? .left : .right, to: lastView,
+                                              lastView == self ?
+                                                (fillMethod == .leftToRight ? .left : .right)
+                                                : (fillMethod == .leftToRight ? .right : .left))
                     /* If the last view was this view and we're not spacing interally, no spacing
                      needed. */
                     .withOffset((lastView == self && !spacesInternally) ? 0 : spacing))
@@ -123,30 +168,37 @@ extension UIView {
      If internal spacing is toggled on, there will be additional spacing before the first view's top
      and the last view's bottom margins with respect to this view.
      
-     If internal spacing is toggled on, there will not be additional spacing before the first view's
-     top and the last view's bottom margins with respect to this view.
+     If internal spacing is toggled off, there will not be additional spacing before the first
+     view's top and the last view's bottom margins with respect to this view.
      
+     - Parameter fillMethod: The method of filling vertically; must only be .TopToBottom or
+     .BottomToTop
      - Parameter views: The views that should fill this view vertically
      - Parameter spacing: The amount of spacing between views
      - Parameter spacesInternally: Determines if additional spacing is provided for the first view
      and last view with respect to this view.
      - Returns: The constraints created to fill this view vertically. These will be alternating
      sequences of `.top` and `.height` constraints for each view in the input variable `views`.
-    */
-    @discardableResult public func fillVertically(withViews views: [UIView],
-                                                  withSpacing spacing: CGFloat,
-                                                  spacesInternally: Bool = true)
+     */
+    @discardableResult private func fillVertically(_ fillMethod: FillMethod,
+                                                   withViews views: [UIView],
+                                                   withSpacing spacing: CGFloat,
+                                                   spacesInternally: Bool = true)
         -> [NSLayoutConstraint] {
+            
             var constraints = [NSLayoutConstraint]()
             /* If spacesInternally == true, add 1 since we account for spacing before the first view
-                and spacing after the last. If false, subtract 1 since there will be 1 less space */
+             and spacing after the last. If false, subtract 1 since there will be 1 less space */
             let heightOfSpacing = CGFloat(views.count + (spacesInternally ? 1 : -1)) * spacing
             var lastView = self
             
             for view in views {
-                constraints.append(view.cling(.top, to: lastView, lastView == self ? .top : .bottom)
+                constraints.append(view.cling(fillMethod == .topToBottom ? .top : .bottom,
+                                              to: lastView, lastView == self ?
+                                                (fillMethod == .topToBottom ? .top : .bottom)
+                                                : (fillMethod == .topToBottom ? .bottom : .top))
                     /* If the last view was this view and we're not spacing interally, no spacing
-                        needed. */
+                     needed. */
                     .withOffset((lastView == self && !spacesInternally) ? 0 : spacing))
                 constraints.append(view.copy(.height, of: self)
                     .withMultiplier(1 / CGFloat(views.count))
@@ -163,7 +215,7 @@ extension UIView {
      specified height.
      
      - Parameter height: The height that the NSLayoutConstraint should specify for this view
-    */
+     */
     @discardableResult public func setHeight(_ height: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         
