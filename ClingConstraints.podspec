@@ -2,11 +2,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "ClingConstraints"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Library for programmatic constraints in iOS; emphasis on readability"
 
   s.description  = <<-DESC
-  A programmatic constraints library for iOS written using Swift.
+  A programmatic constraints library for iOS written using Swift 4.2.
   Easily write constraints in code and keep them readable!
                    DESC
 
