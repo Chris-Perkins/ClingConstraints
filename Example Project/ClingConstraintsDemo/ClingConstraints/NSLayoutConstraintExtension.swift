@@ -73,7 +73,7 @@ extension NSLayoutConstraint {
      - Parameter newRelation: The relation that should be set for the new constraint
      - Returns: The new activated constraint with the provided `newRelation` value
      */
-    @discardableResult public func withRelation(_ newRelation: NSLayoutRelation)
+    @discardableResult public func withRelation(_ newRelation: NSLayoutConstraint.Relation)
         -> NSLayoutConstraint {
         let newConstraint = NSLayoutConstraint(item: firstItem!, attribute: firstAttribute,
                                                relatedBy: newRelation, toItem: secondItem,

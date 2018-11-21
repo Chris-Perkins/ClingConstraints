@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension NSLayoutConstraint {
+extension NSLayoutConstraint {
     /**
      Creates a new constraint with the given multiplier and the original constraint's other
      properties, deactivates and removes the old constraint, activates the created constraint, and
@@ -73,7 +73,7 @@ public extension NSLayoutConstraint {
      - Parameter newRelation: The relation that should be set for the new constraint
      - Returns: The new activated constraint with the provided `newRelation` value
      */
-    @discardableResult public func withRelation(_ newRelation: NSLayoutRelation)
+    @discardableResult public func withRelation(_ newRelation: NSLayoutConstraint.Relation)
         -> NSLayoutConstraint {
         let newConstraint = NSLayoutConstraint(item: firstItem!, attribute: firstAttribute,
                                                relatedBy: newRelation, toItem: secondItem,

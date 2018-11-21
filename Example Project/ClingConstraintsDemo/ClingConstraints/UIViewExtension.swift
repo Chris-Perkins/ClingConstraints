@@ -17,7 +17,7 @@ public extension UIView {
      - Parameter viewToCopy: The view whose attributes should be copied from
      - Returns: A list of  NSLayoutConstraints that copy the specified viewToCopy's attributes
      */
-    @discardableResult public func copy(_ attributes: NSLayoutAttribute...,
+    @discardableResult public func copy(_ attributes: NSLayoutConstraint.Attribute...,
         of viewToCopy: UIView) -> [NSLayoutConstraint] {
         return attributes.map { self.copy($0, of: viewToCopy) }
     }
@@ -30,7 +30,7 @@ public extension UIView {
      - Parameter viewToCopy: The view whose attribute should be copied from
      - Returns: An NSLayoutConstraint that copies the specified viewToCopy's attribute
      */
-    @discardableResult public func copy(_ attribute: NSLayoutAttribute,
+    @discardableResult public func copy(_ attribute: NSLayoutConstraint.Attribute,
                                         of viewToCopy: UIView) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -55,9 +55,9 @@ public extension UIView {
      cling to
      - Returns: The constraint that was clinged to
      */
-    @discardableResult public func cling(_ clingerAttribute: NSLayoutAttribute,
-                                         to clingedView: UIView,
-                                         _ clingedAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    @discardableResult public func cling(
+        _ clingerAttribute: NSLayoutConstraint.Attribute, to clingedView: UIView,
+        _ clingedAttribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         
         let clingedConstraint = NSLayoutConstraint(item: self, attribute: clingerAttribute,

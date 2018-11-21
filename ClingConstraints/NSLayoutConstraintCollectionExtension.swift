@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension Collection where Element == NSLayoutConstraint {
+extension Collection where Element == NSLayoutConstraint {
     /**
      Sets the `isActive` property for all constraints in this Collection to true.
      */
