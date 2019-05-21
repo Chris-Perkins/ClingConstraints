@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Collection Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Collection" class="dashAnchor"></a>
+    <a title="Collection Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ClingConstraints Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ClingConstraints Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Collection Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FillMethod.html">FillMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Collection</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Collection</span> <span class="p">:</span> <span class="kt">Sequence</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE15withMultipliersySayACG12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/withMultipliers(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE15withMultipliersySayACG12CoreGraphics7CGFloatVF">withMultipliers(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies the provided multiplier value to all constraints in the collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withMultipliers</span><span class="p">(</span><span class="n">_</span> <span class="nv">multipliersValue</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multipliersValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier that should be set for all constraints in the collection</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new, activated constraints</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE11withOffsetsySayACG12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/withOffsets(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE11withOffsetsySayACG12CoreGraphics7CGFloatVF">withOffsets(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies to provided offset value to all constraints in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withOffsets</span><span class="p">(</span><span class="n">_</span> <span class="nv">offsetsValue</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offsetsValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset value that should be set for all constraints in the collection</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new, activated constraints</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE13withRelationsySayACGSo0C8RelationVF"></a>
+                    <a name="//apple_ref/swift/Method/withRelations(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE13withRelationsySayACGSo0C8RelationVF">withRelations(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies the new relation value to all constraints in the collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withRelations</span><span class="p">(</span><span class="n">_</span> <span class="nv">newRelations</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Relation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newRelation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The relation that should be set for tall constraints in the collection</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new, activated constraints</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE14withPrioritiesySayACGSo16UILayoutPriorityaF"></a>
+                    <a name="//apple_ref/swift/Method/withPriorities(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE14withPrioritiesySayACGSo16UILayoutPriorityaF">withPriorities(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies the input priority value to all constraints in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withPriorities</span><span class="p">(</span><span class="n">_</span> <span class="nv">prioritiesValue</span><span class="p">:</span> <span class="kt">UILayoutPriority</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The priority that should be set for all constraints in the collection</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new, activated constraints</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE011activateAllB0yyF"></a>
+                    <a name="//apple_ref/swift/Method/activateAllConstraints()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE011activateAllB0yyF">activateAllConstraints()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the <code>isActive</code> property for all constraints in this Collection to true.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">activateAllConstraints</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE013deactivateAllB0yyF"></a>
+                    <a name="//apple_ref/swift/Method/deactivateAllConstraints()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl16ClingConstraintsSo18NSLayoutConstraintC7ElementRtzrlE013deactivateAllB0yyF">deactivateAllConstraints()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the <code>isActive</code> property for all constraints in this Collection to false.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deactivateAllConstraints</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/Chris-Perkins/ClingConstraints" target="_blank" rel="external">Chris Perkins</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

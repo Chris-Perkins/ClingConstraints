@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSLayoutConstraint Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/NSLayoutConstraint" class="dashAnchor"></a>
+    <a title="NSLayoutConstraint Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ClingConstraints Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ClingConstraints Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NSLayoutConstraint Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FillMethod.html">FillMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NSLayoutConstraint</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NSLayoutConstraint</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSLayoutConstraintC16ClingConstraintsE14withMultiplieryAB12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/withMultiplier(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSLayoutConstraintC16ClingConstraintsE14withMultiplieryAB12CoreGraphics7CGFloatVF">withMultiplier(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new constraint with the given multiplier and the original constraint&rsquo;s other
+properties, deactivates and removes the old constraint, activates the created constraint, and
+returns the created constraint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withMultiplier</span><span class="p">(</span><span class="n">_</span> <span class="nv">newMultiplier</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newMultiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier that should be set for the new constraint</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new activated constraint with the provided <code>newMultiplier</code> value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSLayoutConstraintC16ClingConstraintsE10withOffsetyAB12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/withOffset(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSLayoutConstraintC16ClingConstraintsE10withOffsetyAB12CoreGraphics7CGFloatVF">withOffset(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the offset of the constraint and returns this constraint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withOffset</span><span class="p">(</span><span class="n">_</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset that the constraint should have</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>This constraint with the offset of the provided offset value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSLayoutConstraintC16ClingConstraintsE12withPriorityyABSo08UILayoutF0aF"></a>
+                    <a name="//apple_ref/swift/Method/withPriority(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSLayoutConstraintC16ClingConstraintsE12withPriorityyABSo08UILayoutF0aF">withPriority(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new constraint with the given priority and the original constraint&rsquo;s other
+properties, deactivates and removes the old constraint, activates the created constraint, and
+returns the created constraint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withPriority</span><span class="p">(</span><span class="n">_</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">UILayoutPriority</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The priority that should be set for the new constraint</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new activated constraint with the provided <code>priority</code> value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSLayoutConstraintC16ClingConstraintsE12withRelationyABSo0aF0VF"></a>
+                    <a name="//apple_ref/swift/Method/withRelation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSLayoutConstraintC16ClingConstraintsE12withRelationyABSo0aF0VF">withRelation(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new constraint with the given relation and the original constraint&rsquo;s other
+properties, deactivates and removes the old constraint, activates the created constraint, and
+returns the created constraint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">withRelation</span><span class="p">(</span><span class="n">_</span> <span class="nv">newRelation</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Relation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newRelation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The relation that should be set for the new constraint</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new activated constraint with the provided <code>newRelation</code> value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/Chris-Perkins/ClingConstraints" target="_blank" rel="external">Chris Perkins</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

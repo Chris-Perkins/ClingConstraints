@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ClingConstraints  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="ClingConstraints  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">ClingConstraints Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">ClingConstraints Reference</a>
+        <img id="carat" src="img/carat.png" />
+        ClingConstraints  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/FillMethod.html">FillMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p align="center">
+    <img src="Readme_Imgs/ClingConstraintsHeader.png" />
+</p>
+
+<p>Yet another programmatic constraints library for iOS. The focus of ClingConstraints is to have clean, readable, and powerful constraint creation.</p>
+
+<p>For instance, <code>thisView.copy(.height, of: thatView)</code></p>
+
+<p align="center">
+<img src="Readme_Imgs/ClingConstraintsDemo.gif" /> <img src="Readme_Imgs/MovingBox.gif" /> <img src="Readme_Imgs/StackingBoxes.gif" />
+</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<p>✅ One-line constraint creation<br>
+✅ One-line copy of multiple constraints<br>
+✅ Chainable property editing for constraints<br>
+✅ Clinging differing constraint attributes together<br>
+✅ One-line vertical or horizontal view filling<br>
+✅ Auto-disable <code>translatesAutoresizingMaskIntoConstraints</code><br>
+✅ Automatically activate constraints<br>
+✅ NSLayoutConstraint collection mass activation/deactivation<br>
+❌ Something bad </p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<ol>
+<li>Install <a href="https://cocoapods.org">CocoaPods</a></li>
+<li><p>Add this repo to your <code>Podfile</code></p>
+<pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'Example'</span> <span class="k">do</span>
+    <span class="c1"># IMPORTANT: Make sure use_frameworks! is included at the top of the file</span>
+    <span class="n">use_frameworks!</span>
+
+    <span class="n">pod</span> <span class="s1">'ClingConstraints'</span>
+<span class="k">end</span>
+</code></pre></li>
+<li><p>Run <code>pod install</code> in the podfile directory from your terminal</p></li>
+<li><p>Open up the <code>.xcworkspace</code> that CocoaPods created</p></li>
+<li><p>Done!</p></li>
+</ol>
+<h2 id='examples' class='heading'>Examples</h2>
+<h5 id='copy-another-view-39-s-attribute' class='heading'>Copy another View&rsquo;s Attribute</h5>
+<pre class="highlight plaintext"><code>//  Creates and activates a constraint that makes thisView's height equal to thatView's
+thisView.copy(.height, of: thatView)
+</code></pre>
+<h5 id='copying-constraints-with-personal-space' class='heading'>Copying Constraints with Personal Space</h5>
+<pre class="highlight plaintext"><code>// thisView copies thatView's height * 0.5 - 30.
+thisView.copy(.height, of: thatView).withOffset(-30).withMultiplier(0.5)
+</code></pre>
+<h5 id='copying-multiple-constraints-in-line' class='heading'>Copying Multiple Constraints In-Line</h5>
+<pre class="highlight plaintext"><code>// thisView copies the right, top, and left anchor constraints of that view-- in one line.
+thisView.copy(.right, .top, .left, of: thatView)
+</code></pre>
+<h5 id='clinging-constraints-together' class='heading'>Clinging Constraints Together</h5>
+<pre class="highlight plaintext"><code>// thisView positions itself to the right of thatView with a spacing of 5
+thisView.cling(.left, to: thatView, .right).withOffset(5)
+</code></pre>
+<h5 id='filling-a-view' class='heading'>Filling a View</h5>
+<pre class="highlight plaintext"><code>// Fills a view from the top to the bottom with the given views
+thisView.fill(.topToBottom, withViews: [thatView1, thatView2], spacing: 0)
+</code></pre>
+<h4 id='what-39-s-in-the-box' class='heading'>What&rsquo;s in the box?</h4>
+<h5 id='constraint-creation' class='heading'>Constraint Creation:</h5>
+
+<p>On any UIView, you can call the following functions.</p>
+
+<p>Note that these all return the created constraint. If multiple constraints are created, a list of constraints are returned.</p>
+<pre class="highlight plaintext"><code>// This view copies the other view's attributes (returns list of created constraints)
+copy(_: NSLayoutAttribute..., of: UIView)
+
+// This view copies the other view's attribute
+copy(_: NSLayoutAttribute, of: UIView)
+
+// Clings the calling view's attribute to the other view's attribute.
+cling(_: NSLayoutAttribute, to: UIView, _: NSLayoutAttribute)
+
+// Fills the calling view with the given FillMethod from left to right.
+// FillMethods: .leftToRight, .rightToLeft, .topToBottom, .bottomToTop
+fill(_: FillMethod, withViews: [UIView], withSpacing: CGFloat, spacesInternally: Bool = true)
+
+// Sets the height for this view
+setHeight(_: CGFloat)
+
+// Sets the width for this view
+setWidth(_: CGFloat)
+</code></pre>
+<h5 id='constraint-property-chaining' class='heading'>Constraint Property Chaining:</h5>
+
+<p>On any NSLayoutConstraint:</p>
+<pre class="highlight plaintext"><code>withMultiplier(_: CGFloat)
+withOffset(_: CGFloat)
+withPriority(_: UILayoutPriority)
+withRelation(_: NSLayoutRelation)
+</code></pre>
+<h4 id='for-constraint-activation-and-deactivation' class='heading'>For constraint activation and deactivation:</h4>
+
+<p>In any collection of constraints:</p>
+<pre class="highlight plaintext"><code>activateAllConstraints()
+deactivateAllConstraints()  
+</code></pre>
+<h2 id='example-project' class='heading'>Example Project</h2>
+
+<p align="center">
+    <img src="Readme_Imgs/ClingConstraintsDemo.gif" />
+</p>
+
+<p>The example project in this repository will show how the above animation was created using constraints. Clone this repository and open <code>.xcodeproj</code> file located in the <q>Example Project</q> directory. </p>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Read the <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Chris-Perkins/ClingConstraints/master/docs/index.html">docs</a></p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p><a href="chrisperkins.me">Chris Perkins</a></p>
+
+<p>Thanks to <a href="https://github.com/luispadron">Luis Padron</a> for helping set this up! 👍</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/Chris-Perkins/ClingConstraints" target="_blank" rel="external">Chris Perkins</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
