@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "ClingConstraints"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "Library for programmatic constraints in iOS; emphasis on readability"
 
   s.description  = <<-DESC
