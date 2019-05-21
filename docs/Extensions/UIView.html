@@ -80,7 +80,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates, activates, and returns a list of NSLayoutConstraint that copies the specified
-viewToCopy&rsquo;s attributes.</p>
+object&rsquo;s attributes.</p>
 
                       </div>
                       <div class="declaration">
@@ -89,7 +89,7 @@ viewToCopy&rsquo;s attributes.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">_</span> <span class="nv">attributes</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Attribute</span><span class="o">...</span><span class="p">,</span>
-          <span class="n">of</span> <span class="nv">viewToCopy</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+          <span class="n">of</span> <span class="nv">objectToCopy</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -112,12 +112,12 @@ viewToCopy&rsquo;s attributes.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>viewToCopy</em>
+                                <em>objectToCopy</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The view whose attributes should be copied from</p>
+                                  <p>The object whose attributes should be copied from</p>
                                 </div>
                               </td>
                             </tr>
@@ -126,7 +126,7 @@ viewToCopy&rsquo;s attributes.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A list of  NSLayoutConstraints that copy the specified viewToCopy&rsquo;s attributes</p>
+                        <p>A list of  NSLayoutConstraints that copy the specified objectToCopy&rsquo;s attributes</p>
                       </div>
                     </section>
                   </div>
@@ -134,9 +134,9 @@ viewToCopy&rsquo;s attributes.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC16ClingConstraintsE4copy_2ofSo18NSLayoutConstraintCSo0F9AttributeV_ABtF"></a>
+                    <a name="/s:So6UIViewC16ClingConstraintsE4copy_2ofSo18NSLayoutConstraintCSo0F9AttributeV_yptF"></a>
                     <a name="//apple_ref/swift/Method/copy(_:of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC16ClingConstraintsE4copy_2ofSo18NSLayoutConstraintCSo0F9AttributeV_ABtF">copy(_:of:)</a>
+                    <a class="token" href="#/s:So6UIViewC16ClingConstraintsE4copy_2ofSo18NSLayoutConstraintCSo0F9AttributeV_yptF">copy(_:of:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,7 +144,7 @@ viewToCopy&rsquo;s attributes.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activates, and returns an NSLayoutConstraint that copies the specified viewToCopy&rsquo;s
+                        <p>Creates, activates, and returns an NSLayoutConstraint that copies the specified object&rsquo;s
 attribute.</p>
 
                       </div>
@@ -154,7 +154,7 @@ attribute.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">_</span> <span class="nv">attribute</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Attribute</span><span class="p">,</span>
-          <span class="n">of</span> <span class="nv">viewToCopy</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+          <span class="n">of</span> <span class="nv">objectToCopy</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
 
                         </div>
                       </div>
@@ -177,12 +177,12 @@ attribute.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>viewToCopy</em>
+                                <em>objectToCopy</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The view whose attribute should be copied from</p>
+                                  <p>The object whose attribute should be copied from</p>
                                 </div>
                               </td>
                             </tr>
@@ -191,7 +191,7 @@ attribute.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An NSLayoutConstraint that copies the specified viewToCopy&rsquo;s attribute</p>
+                        <p>An NSLayoutConstraint that copies the specified objectToCopy&rsquo;s attribute</p>
                       </div>
                     </section>
                   </div>
@@ -199,9 +199,9 @@ attribute.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC16ClingConstraintsE5cling_2to_So18NSLayoutConstraintCSo0F9AttributeV_AbItF"></a>
+                    <a name="/s:So6UIViewC16ClingConstraintsE5cling_2to_So18NSLayoutConstraintCSo0F9AttributeV_ypAItF"></a>
                     <a name="//apple_ref/swift/Method/cling(_:to:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC16ClingConstraintsE5cling_2to_So18NSLayoutConstraintCSo0F9AttributeV_AbItF">cling(_:to:_:)</a>
+                    <a class="token" href="#/s:So6UIViewC16ClingConstraintsE5cling_2to_So18NSLayoutConstraintCSo0F9AttributeV_ypAItF">cling(_:to:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -210,7 +210,7 @@ attribute.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates, activats, and returns a constraint that clings this view&rsquo;s specified attribute to the
-specified view&rsquo;s clingedAttribute.</p>
+specified object&rsquo;s clingedAttribute.</p>
 
 <p>Example: <code>cling(attribute: .left, toView: button, .right)</code> would cling this view&rsquo;s
 left-side to the button&rsquo;s right-side.</p>
@@ -222,7 +222,7 @@ left-side to the button&rsquo;s right-side.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">func</span> <span class="nf">cling</span><span class="p">(</span><span class="n">_</span> <span class="nv">clingerAttribute</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Attribute</span><span class="p">,</span>
-           <span class="n">to</span> <span class="nv">clingedView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span>
+           <span class="n">to</span> <span class="nv">clingedObject</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
            <span class="n">_</span> <span class="nv">clingedAttribute</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Attribute</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
 
                         </div>
@@ -246,7 +246,7 @@ left-side to the button&rsquo;s right-side.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>clingedView</em>
+                                <em>clingedObject</em>
                                 </code>
                               </td>
                               <td>
