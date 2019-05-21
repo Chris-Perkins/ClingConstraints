@@ -9,6 +9,7 @@
 import UIKit
 
 public extension UIView {
+
     /**
      Creates, activates, and returns a list of NSLayoutConstraint that copies the specified
      viewToCopy's attributes.
@@ -17,7 +18,7 @@ public extension UIView {
      - Parameter viewToCopy: The view whose attributes should be copied from
      - Returns: A list of  NSLayoutConstraints that copy the specified viewToCopy's attributes
      */
-    @discardableResult public func copy(_ attributes: NSLayoutAttribute...,
+    @discardableResult func copy(_ attributes: NSLayoutAttribute...,
         of viewToCopy: UIView) -> [NSLayoutConstraint] {
         return attributes.map { self.copy($0, of: viewToCopy) }
     }
@@ -30,7 +31,7 @@ public extension UIView {
      - Parameter viewToCopy: The view whose attribute should be copied from
      - Returns: An NSLayoutConstraint that copies the specified viewToCopy's attribute
      */
-    @discardableResult public func copy(_ attribute: NSLayoutAttribute,
+    @discardableResult func copy(_ attribute: NSLayoutAttribute,
                                         of viewToCopy: UIView) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -55,7 +56,7 @@ public extension UIView {
      cling to
      - Returns: The constraint that was clinged to
      */
-    @discardableResult public func cling(_ clingerAttribute: NSLayoutAttribute,
+    @discardableResult func cling(_ clingerAttribute: NSLayoutAttribute,
                                          to clingedView: UIView,
                                          _ clingedAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
@@ -92,7 +93,7 @@ public extension UIView {
      - Returns: The constraints created to fill this view horizontally. These will be alternating
      sequences of `.left` and `.width` constraints for each view in the input variable `views`.
      */
-    @discardableResult public func fill(_ fillMethod: FillMethod,
+    @discardableResult func fill(_ fillMethod: FillMethod,
                                         withViews views: [UIView],
                                         withSpacing spacing: CGFloat,
                                         spacesInternally: Bool = true) -> [NSLayoutConstraint] {
@@ -216,7 +217,7 @@ public extension UIView {
      
      - Parameter height: The height that the NSLayoutConstraint should specify for this view
      */
-    @discardableResult public func setHeight(_ height: CGFloat) -> NSLayoutConstraint {
+    @discardableResult func setHeight(_ height: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal,
@@ -233,7 +234,7 @@ public extension UIView {
      
      - Parameter width: The width that the NSLayoutConstraint should specify for this view
      */
-    @discardableResult public func setWidth(_ width: CGFloat) -> NSLayoutConstraint {
+    @discardableResult func setWidth(_ width: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal,
