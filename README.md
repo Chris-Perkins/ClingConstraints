@@ -2,6 +2,10 @@
 	<img src="Readme_Imgs/ClingConstraintsHeader.png" />
 </p>
 
+[![Version](https://img.shields.io/cocoapods/v/ClingConstraints.svg?style=flat)](https://cocoapods.org/pods/ClingConstraints)
+[![License](https://img.shields.io/cocoapods/l/ClingConstraints.svg?style=flat)](https://cocoapods.org/pods/ClingConstraints)
+[![Platform](https://img.shields.io/cocoapods/p/ClingConstraints.svg?style=flat)](https://cocoapods.org/pods/ClingConstraints)
+
 Yet another programmatic constraints library for iOS. The focus of ClingConstraints is to have clean, readable, and powerful constraint creation.
 
 For instance, `thisView.copy(.height, of: thatView)`
