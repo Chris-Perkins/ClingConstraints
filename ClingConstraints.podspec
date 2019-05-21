@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ClingConstraints"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "Library for programmatic constraints in iOS; emphasis on readability"
 
   s.description  = <<-DESC
@@ -20,4 +20,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Chris-Perkins/ClingConstraints.git", :tag => "v#{s.version}" }
 
   s.source_files  = "ClingConstraints", "ClingConstraints/**/*.{h,m}"
+  s.swift_version = '4.2'
 end
