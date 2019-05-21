@@ -1,0 +1,16 @@
+PODS:
+  - ClingConstraints (1.1.2)
+
+DEPENDENCIES:
+  - ClingConstraints (from `../`)
+
+EXTERNAL SOURCES:
+  ClingConstraints:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ClingConstraints: 0772860b7803786d685dc6d17737e21042c4ed15
+
+PODFILE CHECKSUM: d69e7a9823c5d6d9df13ba759194273a1a5a4576
+
+COCOAPODS: 1.6.1

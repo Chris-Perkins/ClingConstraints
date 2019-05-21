@@ -1,0 +1,22 @@
+{
+  "name": "ClingConstraints",
+  "version": "1.1.2",
+  "summary": "A short description of ClingConstraints.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chrisfromtemporaryid@gmail.com/ClingConstraints",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chrisfromtemporaryid@gmail.com": "chrisfromtemporaryid@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/chrisfromtemporaryid@gmail.com/ClingConstraints.git",
+    "tag": "1.1.2"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ClingConstraints/Classes/**/*"
+}
