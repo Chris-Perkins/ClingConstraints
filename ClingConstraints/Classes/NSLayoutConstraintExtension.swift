@@ -23,9 +23,10 @@ public extension NSLayoutConstraint {
                                                relatedBy: relation, toItem: secondItem,
                                                attribute: secondAttribute,
                                                multiplier: newMultiplier, constant: constant)
+        let originallyActive = isActive
         isActive = false
         firstItem?.removeConstraint(self)
-        newConstraint.isActive = true
+        newConstraint.isActive = originallyActive
         
         return newConstraint
     }
@@ -37,9 +38,10 @@ public extension NSLayoutConstraint {
      - Returns: This constraint with the offset of the provided offset value
     */
     @discardableResult func withOffset(_ offset: CGFloat) -> NSLayoutConstraint {
+        let originallyActive = isActive
         isActive = false
         constant = offset
-        isActive = true
+        isActive = originallyActive
         
         return self
     }
@@ -58,10 +60,11 @@ public extension NSLayoutConstraint {
                                                attribute: secondAttribute,
                                                multiplier: multiplier, constant: constant)
         newConstraint.priority = priority
-            
+
+        let originallyActive = isActive
         isActive = false
         firstItem?.removeConstraint(self)
-        newConstraint.isActive = true
+        newConstraint.isActive = originallyActive
         return self
     }
     
@@ -78,9 +81,10 @@ public extension NSLayoutConstraint {
                                                relatedBy: newRelation, toItem: secondItem,
                                                attribute: secondAttribute,
                                                multiplier: multiplier, constant: constant)
+        let originallyActive = isActive
         isActive = false
         firstItem?.removeConstraint(self)
-        newConstraint.isActive = true
+        newConstraint.isActive = originallyActive
         
         return newConstraint
     }
