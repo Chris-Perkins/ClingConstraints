@@ -7,13 +7,14 @@
 //
 
 /// An enum defining the different ways to fill something.
+///
+/// - topToBottom: A method for filling something from the top to the bottom.
+/// - bottomToTop: A method for filling something from the bottom to the top.
+/// - leftToRight: A method for filling something from the left to the right.
+/// - rightToLeft: A method for filling something from the right to the left.
 public enum FillMethod {
-    /// A method for filling something from the top to the bottom.
     case topToBottom
-    /// A method for filling something from the bottom to the top.
     case bottomToTop
-    /// A method for filling something from the left to the right.
     case leftToRight
-    /// A method for filling something from the right to the left.
     case rightToLeft
 }

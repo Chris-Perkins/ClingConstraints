@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FF66B6DFA96771235BEC51F2B799A13 /* FillMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5768CD76AE20DB321D9A99108F4165 /* FillMethod.swift */; };
+		2255C3D822AC367900748A7C /* FillMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255C3D722AC367800748A7C /* FillMethod.swift */; };
 		5482F2F2077B3C6713092ED7A952A4B4 /* ClingConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49197E72A0B86ABF51853BF59EE32446 /* ClingConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A76F54E49130FA25910454A85DE2FAA /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CF9A1E49C98D8D64717A777A250633 /* NSLayoutConstraintExtension.swift */; };
 		635F2FD94F3492DCDCE325CE778D3A5E /* ClingConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C69E377ACF9323077184F7F64999D6 /* ClingConstraints-dummy.m */; };
@@ -30,22 +30,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2255C3D722AC367800748A7C /* FillMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FillMethod.swift; path = ClingConstraints/Classes/FillMethod.swift; sourceTree = "<group>"; };
 		27A0E652306D28F0EA46665EF152CAC1 /* ClingConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ClingConstraints.modulemap; sourceTree = "<group>"; };
 		2C87D723B394D88B01399FB4E0250284 /* Pods-ClingConstraintsDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClingConstraintsDemo-Info.plist"; sourceTree = "<group>"; };
-		336A5A0E3EB171797528DABA61C8A8CC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		336A5A0E3EB171797528DABA61C8A8CC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3632030B01859E24F66B844C701FB2C4 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = ClingConstraints/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
 		3F56CB0A8623DF1FCEA17E391F4B9C16 /* Pods-ClingConstraintsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClingConstraintsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		49197E72A0B86ABF51853BF59EE32446 /* ClingConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ClingConstraints-umbrella.h"; sourceTree = "<group>"; };
 		49DFD50CFE8118DCBD40B26109AD54E5 /* NSLayoutConstraintCollectionExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraintCollectionExtension.swift; path = ClingConstraints/Classes/NSLayoutConstraintCollectionExtension.swift; sourceTree = "<group>"; };
-		669689889AC53AF72F4DF2913BE7B36D /* Pods_ClingConstraintsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClingConstraintsDemo.framework; path = "Pods-ClingConstraintsDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		669689889AC53AF72F4DF2913BE7B36D /* Pods_ClingConstraintsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClingConstraintsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EA9C3CCF6F642DB3A77D44560943BE /* Pods-ClingConstraintsDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClingConstraintsDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		815B1973DA45F5543C5195843207F119 /* Pods-ClingConstraintsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClingConstraintsDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		988C99DD9CD75BCB2D39C4CCFB206D21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		988C99DD9CD75BCB2D39C4CCFB206D21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6CF9A1E49C98D8D64717A777A250633 /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraintExtension.swift; path = ClingConstraints/Classes/NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		B7C69E377ACF9323077184F7F64999D6 /* ClingConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ClingConstraints-dummy.m"; sourceTree = "<group>"; };
 		C4A184016DD723B1D776ED4295E974FA /* Pods-ClingConstraintsDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClingConstraintsDemo-umbrella.h"; sourceTree = "<group>"; };
-		C7F1D8551E463FC74E8916C9D2907A02 /* ClingConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ClingConstraints.framework; path = ClingConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7F1D8551E463FC74E8916C9D2907A02 /* ClingConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClingConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD81931A4BD453A8DE447CBE3F7CEA19 /* Pods-ClingConstraintsDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClingConstraintsDemo.modulemap"; sourceTree = "<group>"; };
 		CDD8B460EC9280857A4938A37C4E6471 /* Pods-ClingConstraintsDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClingConstraintsDemo-frameworks.sh"; sourceTree = "<group>"; };
@@ -54,8 +55,7 @@
 		D6F82B3CE96DD97ED282189A0AA335B4 /* Pods-ClingConstraintsDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClingConstraintsDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DE4CEF825593A356C68ACFE357DD944A /* ClingConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClingConstraints.xcconfig; sourceTree = "<group>"; };
 		F4F1E12457E6ACA4429E92B2C4B10FCC /* ClingConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ClingConstraints-prefix.pch"; sourceTree = "<group>"; };
-		FA5768CD76AE20DB321D9A99108F4165 /* FillMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillMethod.swift; path = ClingConstraints/Classes/FillMethod.swift; sourceTree = "<group>"; };
-		FE6C7246E441233C6D8B6FD76DAEC36E /* ClingConstraints.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ClingConstraints.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FE6C7246E441233C6D8B6FD76DAEC36E /* ClingConstraints.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ClingConstraints.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 		C201A0CC6EB422A4556243ED0A812515 /* ClingConstraints */ = {
 			isa = PBXGroup;
 			children = (
-				FA5768CD76AE20DB321D9A99108F4165 /* FillMethod.swift */,
+				2255C3D722AC367800748A7C /* FillMethod.swift */,
 				49DFD50CFE8118DCBD40B26109AD54E5 /* NSLayoutConstraintCollectionExtension.swift */,
 				A6CF9A1E49C98D8D64717A777A250633 /* NSLayoutConstraintExtension.swift */,
 				3632030B01859E24F66B844C701FB2C4 /* UIViewExtension.swift */,
@@ -258,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -293,8 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2255C3D822AC367900748A7C /* FillMethod.swift in Sources */,
 				635F2FD94F3492DCDCE325CE778D3A5E /* ClingConstraints-dummy.m in Sources */,
-				3FF66B6DFA96771235BEC51F2B799A13 /* FillMethod.swift in Sources */,
 				68DD66626235735D3D2DF3DB5B983AE3 /* NSLayoutConstraintCollectionExtension.swift in Sources */,
 				5A76F54E49130FA25910454A85DE2FAA /* NSLayoutConstraintExtension.swift in Sources */,
 				BC3B4B472A7C8C408D3A069F37EEAC71 /* UIViewExtension.swift in Sources */,
