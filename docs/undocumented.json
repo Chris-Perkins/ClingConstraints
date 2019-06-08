@@ -1,6 +1,33 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/chrisperkins/Desktop/Libraries/ClingConstraints/ClingConstraints/ClingConstraints/Classes/FillMethod.swift",
+      "line": 16,
+      "symbol": "FillMethod.topToBottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/Libraries/ClingConstraints/ClingConstraints/ClingConstraints/Classes/FillMethod.swift",
+      "line": 17,
+      "symbol": "FillMethod.bottomToTop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/Libraries/ClingConstraints/ClingConstraints/ClingConstraints/Classes/FillMethod.swift",
+      "line": 18,
+      "symbol": "FillMethod.leftToRight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chrisperkins/Desktop/Libraries/ClingConstraints/ClingConstraints/ClingConstraints/Classes/FillMethod.swift",
+      "line": 19,
+      "symbol": "FillMethod.rightToLeft",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/chrisperkins/Desktop/Libraries/ClingConstraints/ClingConstraints"
 }

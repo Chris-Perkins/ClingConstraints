@@ -14,7 +14,7 @@
     <a title="UIView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ClingConstraints Docs</a> (100% documented)</p>
+        <p><a href="../index.html">ClingConstraints Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -79,8 +79,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activates, and returns a list of NSLayoutConstraint that copies the specified
-object&rsquo;s attributes.</p>
+                        <p>Creates, activates, and returns a list of NSLayoutConstraint that copies the specified object&rsquo;s attributes.</p>
 
                       </div>
                       <div class="declaration">
@@ -144,8 +143,7 @@ object&rsquo;s attributes.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activates, and returns an NSLayoutConstraint that copies the specified object&rsquo;s
-attribute.</p>
+                        <p>Creates, activates, and returns an NSLayoutConstraint that copies the specified object&rsquo;s attribute.</p>
 
                       </div>
                       <div class="declaration">
@@ -209,11 +207,11 @@ attribute.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activats, and returns a constraint that clings this view&rsquo;s specified attribute to the
-specified object&rsquo;s clingedAttribute.</p>
+                        <p>Creates, activats, and returns a constraint that clings this view&rsquo;s specified attribute to the specified
+object&rsquo;s clingedAttribute.</p>
 
-<p>Example: <code>cling(attribute: .left, toView: button, .right)</code> would cling this view&rsquo;s
-left-side to the button&rsquo;s right-side.</p>
+<p>Example: <code>cling(attribute: .left, toView: button, .right)</code> would cling this view&rsquo;s left-side to the button&rsquo;s
+right-side.</p>
 
                       </div>
                       <div class="declaration">
@@ -263,8 +261,7 @@ left-side to the button&rsquo;s right-side.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The attribute from the clingedView that this constraint should
-cling to</p>
+                                  <p>The attribute from the clingedView that this constraint should cling to</p>
                                 </div>
                               </td>
                             </tr>
@@ -273,7 +270,7 @@ cling to</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The constraint that was clinged to</p>
+                        <p>The constraint that clings this view to the clingedObject with the specified attribute.</p>
                       </div>
                     </section>
                   </div>
@@ -291,19 +288,18 @@ cling to</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activates, and returns the constraints that are created to fill this view
-with the provided views with the given spacing for the provided fill method.</p>
+                        <p>Creates, activates, and returns the constraints that are created to fill this view with the provided views with
+the given spacing for the provided fill method.</p>
 
-<p>If internal spacing is toggled on, there will be additional spacing before the first view&rsquo;s left
-and the last view&rsquo;s right margins with respect to this view.</p>
+<p>If internal spacing is toggled on, there will be additional spacing before the first view&rsquo;s left and the last
+view&rsquo;s right margins with respect to this view.</p>
 
-<p>If internal spacing is toggled off, there will not be additional spacing before the first view&rsquo;s
-left and the last view&rsquo;s right margins with respect to this view.</p>
+<p>If internal spacing is toggled off, there will not be additional spacing before the first view&rsquo;s left and the
+last view&rsquo;s right margins with respect to this view.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>No constraints beyond those needed to fill the view are created. For instance, if a
-view should be filled with other views .topToBottom, no width or centering horizontally
-constraints will be created.</p>
+    No constraints beyond those needed to fill the view are created. For instance, if a view should be
+filled with other views .topToBottom, no width or centering horizontally constraints will be created.
 
 </div>
 
@@ -344,7 +340,7 @@ constraints will be created.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The views that should fill this view horizontally</p>
+                                  <p>The views that should fill this view</p>
                                 </div>
                               </td>
                             </tr>
@@ -368,8 +364,8 @@ constraints will be created.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Determines if additional spacing is provided for the first view
-and last view with respect to this view.</p>
+                                  <p>Determines if additional spacing is provided for the first view and last view with respect
+to this view.</p>
                                 </div>
                               </td>
                             </tr>
@@ -378,8 +374,8 @@ and last view with respect to this view.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The constraints created to fill this view horizontally. These will be alternating
-sequences of <code>.left</code> and <code>.width</code> constraints for each view in the input variable <code>views</code>.</p>
+                        <p>The constraints created to fill this view. This will be a series of alternating constraints in the
+sequence of views provided.</p>
                       </div>
                     </section>
                   </div>
@@ -397,8 +393,7 @@ sequences of <code>.left</code> and <code>.width</code> constraints for each vie
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activates, and returns a constraint that sets the height for the calling view to the
-specified height.</p>
+                        <p>Creates, activates, and returns a constraint that sets the height for the calling view to the specified height.</p>
 
                       </div>
                       <div class="declaration">
@@ -429,6 +424,10 @@ specified height.</p>
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new, activated constraint</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -445,8 +444,7 @@ specified height.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates, activates, and returns a constraint that sets the width for the calling view to the
-specified width.</p>
+                        <p>Creates, activates, and returns a constraint that sets the width for the calling view to the specified width.</p>
 
                       </div>
                       <div class="declaration">
@@ -477,6 +475,10 @@ specified width.</p>
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new, activated constraint</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -485,7 +487,7 @@ specified width.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/Chris-Perkins/ClingConstraints" target="_blank" rel="external">Chris Perkins</a>. All rights reserved. (Last updated: 2019-05-21)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/Chris-Perkins/ClingConstraints" target="_blank" rel="external">Chris Perkins</a>. All rights reserved. (Last updated: 2019-06-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
